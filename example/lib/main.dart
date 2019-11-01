@@ -111,14 +111,22 @@ class OnBoardingPage extends StatelessWidget {
               )
             )
           ),
-          title: "Fourth title page",
-          bodyWidget: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Text("Click on "),
-              Icon(Icons.edit),
-              Text(" to edit a post"),
-            ],
+          title: "",
+          // title: "Fourth title page",
+          // bodyWidget: Row(
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   children: const [
+          //     Text("Click on "),
+          //     Icon(Icons.edit),
+          //     Text(" to edit a post"),
+          //   ],
+          // ),
+          footer: RaisedButton(
+            onPressed: () {
+              _onIntroEnd(context);
+            },
+            child: const Text('Go', style: TextStyle(color: Colors.white)),
+            color: Colors.yellow,
           ),
           // image: _buildImage(),
         ),

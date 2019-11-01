@@ -20,13 +20,13 @@ class IntroContent extends StatelessWidget {
           const SizedBox(height: 24.0),
           _buildWidget(
             page.titleWidget,
-            page.title,
+            page.title ?? '',
             page.decoration.titleTextStyle,
           ),
           const SizedBox(height: 24.0),
           _buildWidget(
             page.bodyWidget,
-            page.body ?? null,
+            page.body ?? '',
             page.decoration.bodyTextStyle,
           ),
           if (page.footer != null) const SizedBox(height: 24.0),
