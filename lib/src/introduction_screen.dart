@@ -169,6 +169,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
             left: 16,
             right: 16,
             child: SafeArea(
+              top: false,
               child: Row(
                 children: [
                   Expanded(

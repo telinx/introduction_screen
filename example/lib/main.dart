@@ -38,39 +38,79 @@ class OnBoardingPage extends StatelessWidget {
     return IntroductionScreen(
       pages: [
         PageViewModel(
-          title: "First title page",
-          body: "Text of the first page of this onboarding",
-          image: _buildImage(),
-        ),
-        PageViewModel(
-          title: "Second title page",
-          body: "Text of the second page of this onboarding",
-          image: _buildImage(),
-          footer: RaisedButton(
-            onPressed: () {/* Nothing */},
-            child: const Text('Button', style: TextStyle(color: Colors.white)),
-            color: Colors.lightBlue,
+          decoration: PageDecoration(
+            dotsDecorator: const DotsDecorator(
+              activeColor: Colors.red,
+            ),
+            boxDecoration: BoxDecoration(
+              image: DecorationImage(
+                image: NetworkImage('http://n.sinaimg.cn/sports/2_img/upload/cf0d0fdd/30/w1080h1350/20191101/af7b-ihuuxut4756281.jpg'),
+                fit: BoxFit.cover
+              )
+            )
           ),
+          // title: "First title page",
+          // body: "Text of the first page of this onboarding",
+          // image: _buildImage(),
         ),
         PageViewModel(
+          decoration: PageDecoration(
+            dotsDecorator: const DotsDecorator(
+              activeColor: Colors.red,
+            ),
+            boxDecoration: BoxDecoration(
+              image: DecorationImage(
+                image: NetworkImage('http://n.sinaimg.cn/sports/2_img/upload/cf0d0fdd/30/w1080h1350/20191101/af7b-ihuuxut4756281.jpg'),
+                fit: BoxFit.cover
+              )
+            )
+          ),
+          // title: "Second title page",
+          // body: "Text of the second page of this onboarding",
+          // image: _buildImage(),
+          // footer: RaisedButton(
+          //   onPressed: () {/* Nothing */},
+          //   child: const Text('Button', style: TextStyle(color: Colors.white)),
+          //   color: Colors.lightBlue,
+          // ),
+        ),
+        PageViewModel(
+          
           title: "Third title page",
           body: "Text of the third page of this onboarding",
           image: _buildImage(),
           decoration: PageDecoration(
-            titleTextStyle: const TextStyle(
-              fontSize: 28.0,
-              fontWeight: FontWeight.w600,
-              color: Colors.red,
-            ),
+            // titleTextStyle: const TextStyle(
+            //   fontSize: 28.0,
+            //   fontWeight: FontWeight.w600,
+            //   color: Colors.red,
+            // ),
             bodyTextStyle: const TextStyle(fontSize: 22.0),
             dotsDecorator: const DotsDecorator(
               activeColor: Colors.red,
               activeSize: Size.fromRadius(8),
             ),
-            pageColor: Colors.grey[200],
+            // pageColor: Colors.grey[200],
+            boxDecoration: BoxDecoration(
+              image: DecorationImage(
+                image: NetworkImage('http://n.sinaimg.cn/sports/2_img/upload/cf0d0fdd/30/w1080h1350/20191101/af7b-ihuuxut4756281.jpg'),
+                fit: BoxFit.cover
+              )
+            )
           ),
         ),
         PageViewModel(
+          decoration: PageDecoration(
+            dotsDecorator: const DotsDecorator(
+              activeColor: Colors.red,
+            ),
+            boxDecoration: BoxDecoration(
+              image: DecorationImage(
+                image: NetworkImage('http://n.sinaimg.cn/sports/2_img/upload/cf0d0fdd/30/w1080h1350/20191101/af7b-ihuuxut4756281.jpg'),
+                fit: BoxFit.cover
+              )
+            )
+          ),
           title: "Fourth title page",
           bodyWidget: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -80,7 +120,7 @@ class OnBoardingPage extends StatelessWidget {
               Text(" to edit a post"),
             ],
           ),
-          image: _buildImage(),
+          // image: _buildImage(),
         ),
       ],
       onDone: () => _onIntroEnd(context),
@@ -90,7 +130,7 @@ class OnBoardingPage extends StatelessWidget {
       nextFlex: 0,
       skip: const Text('Skip'),
       next: const Icon(Icons.arrow_forward),
-      done: const Text('Done', style: TextStyle(fontWeight: FontWeight.w600)),
+      done: const Text('Done', style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white)),
     );
   }
 }

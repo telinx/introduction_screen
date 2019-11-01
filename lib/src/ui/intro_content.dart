@@ -26,7 +26,7 @@ class IntroContent extends StatelessWidget {
           const SizedBox(height: 24.0),
           _buildWidget(
             page.bodyWidget,
-            page.body,
+            page.body ?? null,
             page.decoration.bodyTextStyle,
           ),
           if (page.footer != null) const SizedBox(height: 24.0),
