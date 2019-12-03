@@ -27,6 +27,8 @@ class PageViewModel {
 
   final double imageHeight;
 
+  final double footerHeight;
+
   PageViewModel({
     this.title,
     this.titleWidget,
@@ -35,7 +37,8 @@ class PageViewModel {
     this.image,
     this.footer,
     this.decoration = const PageDecoration(),
-    this.imageHeight = 175.0
+    this.imageHeight = 175.0,
+    this.footerHeight = 200.0
   }); 
     //  : 
         // assert(

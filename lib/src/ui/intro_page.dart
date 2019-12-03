@@ -45,6 +45,12 @@ class IntroPage extends StatelessWidget {
                   ),
                 ),
               ),
+            if(null != page.footer)
+              Container(
+                alignment: Alignment.topCenter,
+                height: page.footerHeight,
+                child: page.footer,
+              )
           ],
         ),
       ),
